@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [Passive Parts](#passive-parts)
+    - [IPU, IPD (internal)](#ipu-ipd-internal)
+    - [IR LED Control](#ir-led-control)
+    - [POWER check when choosing GPIO](#power-check-when-choosing-gpio)
+    - [DC DC Converter](#dc-dc-converter)
+- [Memory](#memory)
+    - [EEPROM clk speed check (100/400 kHz)](#eeprom-clk-speed-check-100400-khz)
+    - [Nandflash](#nandflash)
+- [Communication IC](#communication-ic)
+    - [UART waveform](#uart-waveform)
+
+<!-- /TOC -->
 # Passive Parts
 ## IPU, IPD (internal)
 Be careful IPU, IPD (They can be set in IC)
