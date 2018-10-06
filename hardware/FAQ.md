@@ -1,6 +1,5 @@
 <!-- TOC -->
 
-- [FAQ](#faq)
 - [Passive Parts](#passive-parts)
     - [IPU, IPD (internal)](#ipu-ipd-internal)
     - [IR LED Control](#ir-led-control)
@@ -25,8 +24,8 @@
 2. Don't make current flow when IR LED Off
 3. Hysterisis
     1. to ban oscillation
-        ex) camera : day <-> night
-        ex) IRLED : on <-> off
+        1. ex) camera : day <-> night
+        2. ex) IRLED : on <-> off
 
 ## POWER check when choosing GPIO
 * when choosing GPIO, check group voltage
