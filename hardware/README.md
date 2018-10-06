@@ -1,6 +1,24 @@
 # Things to consider
 
-[TOC]
+<!-- TOC -->
+
+- [Things to consider](#things-to-consider)
+- [1. When drawing electronic circuit](#1-when-drawing-electronic-circuit)
+    - [For readability](#for-readability)
+    - [Practical Experience](#practical-experience)
+- [2. when drawing artwork](#2-when-drawing-artwork)
+- [3. when debugging](#3-when-debugging)
+- [4. For product reliability](#4-for-product-reliability)
+    - [1) temperature](#1-temperature)
+    - [2) EMI](#2-emi)
+    - [3) LSS, ESD, Impulse](#3-lss-esd-impulse)
+        - [LSS](#lss)
+        - [ESD](#esd)
+    - [4) Safety](#4-safety)
+- [5. Produce Jig, Assembly Workability](#5-produce-jig-assembly-workability)
+- [6. AS](#6-as)
+
+<!-- /TOC -->
 
 # 1. When drawing electronic circuit 
 
@@ -69,12 +87,27 @@ When drawing circuit diagram, it is good to draw for understanding easily.
    1. ex. video output signals and clock
 
 # 3. when debugging
+Booting Issue
+1. check by eye : SMT
+2. cold soldering joint : simply push IC strongly by finger and see. or request to check
+3. timing : check with dryer and freezer
+4. programming register value (ex. PLL)
+5. PCB line disconnection
+6. chip failure : check lot
 
 # 4. For product reliability
 
 ## 1) temperature
 
 ## 2) EMI
+
+1. metal frame convers circuit (Good EMI : shielding effect )
+2. EMI radiate through cable
+   1. check if PCB pattern (to cable) passes by the elements giving noise --> not to pass by
+   2. fix it for preventing cable from moving
+   3. use EMI core (proper frequency)
+   4. FFC cable : GND shield (with cable GND), flat EMI core
+   5. signal clock line : serial resistance
 
 ## 3) LSS, ESD, Impulse
 
@@ -106,17 +139,28 @@ how to trace the cause
   - reset
   - GND combination or separation 
 
-### EMI
-
-1. metal frame convers circuit (Good EMI : shielding effect )
-2. EMI radiate through cable
-   1. check if PCB pattern (to cable) passes by the elements giving noise --> not to pass by
-   2. fix it for preventing cable from moving
-   3. use EMI core (proper frequency)
-   4. FFC cable : GND shield (with cable GND), flat EMI core
-   5. signal clock line : serial resistance
-
 ## 4) Safety
 
-# 5. Produce Jig, Productivity
+# 5. Produce Jig, Assembly Workability
+1. Produce Jig
+  1. PCB hole for routing
+    ideal : 4 EA each square edge, 3 EA in a triangle shape in case of not locate All 4EA    
+  2. make over 3EA for GND TP (TestPoint)
+    Because GND can be short for several POWER TP
+2. Assembly Workability
+- locate connector for easy assemble with cable
+- not to use same pin number connector as possible as I can
+- put parts over 1mm away from machine hole when PCB thickness is 1t
+- parts +/- silk marking
+- machine hole has to hold PCB stable for SMT
 
+# 6. AS
+when board failure happens,
+1. HW : offer trouble shooting guide
+2. SW : how to use SW tool
+  - program download
+  - check and adjust program
+
+
+
+     
