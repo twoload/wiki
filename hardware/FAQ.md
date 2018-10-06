@@ -1,5 +1,6 @@
 <!-- TOC -->
 
+- [FAQ](#faq)
 - [Passive Parts](#passive-parts)
     - [IPU, IPD (internal)](#ipu-ipd-internal)
     - [IR LED Control](#ir-led-control)
@@ -14,11 +15,10 @@
 <!-- /TOC -->
 # Passive Parts
 ## IPU, IPD (internal)
-Be careful IPU, IPD (They can be set in IC)
-Normally 20k ohm resistor is used
-There are some parts to change the value
-
-To pull up/down with IPU/IPD, use 1kohm (refer to datasheet)
+* Be careful IPU, IPD (They can be set in IC)
+* Normally 20k ohm resistor is used
+* There are some parts to change the value
+* To pull up/down with IPU/IPD, use 1kohm (refer to datasheet)
 
 ## IR LED Control
 1. FET - current control by voltage
@@ -29,8 +29,8 @@ To pull up/down with IPU/IPD, use 1kohm (refer to datasheet)
         ex) IRLED : on <-> off
 
 ## POWER check when choosing GPIO
-when choosing GPIO, check group voltage
-when you need 3.3V control, you should not connect to 1.8V
+* when choosing GPIO, check group voltage
+* when you need 3.3V control, you should not connect to 1.8V
 
 ## DC DC Converter
 can change output voltage when we put not normal volatage into feedback input voltage
@@ -52,9 +52,9 @@ i2c communication clk speed check
 
 # Communication IC
 ## UART waveform
-0 ---------- 1
-start, stop
-8bit data transfer between start and stop
-lsb or msb : in most cases, lsb
-ex) 37 send 0. 1100 1110 1.
+* 0 ---------- 1
+* start, stop
+* 8bit data transfer between start and stop
+* lsb or msb : in most cases, lsb
+* ex) 37 send 0. 1100 1110 1.
 
