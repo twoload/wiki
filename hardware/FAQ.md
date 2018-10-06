@@ -1,5 +1,7 @@
+# FAQ
 <!-- TOC -->
 
+- [FAQ](#faq)
 - [Passive Parts](#passive-parts)
     - [IPU, IPD (internal)](#ipu-ipd-internal)
     - [IR LED Control](#ir-led-control)
