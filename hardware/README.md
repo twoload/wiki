@@ -16,7 +16,7 @@
         - [ESD](#esd)
     - [4) Safety](#4-safety)
 - [5. Produce Jig, Assembly Workability](#5-produce-jig-assembly-workability)
-- [6. AS](#6-as)
+- [6. AS (After Service)](#6-as-after-service)
 
 <!-- /TOC -->
 
@@ -25,28 +25,17 @@
 ## For readability
 
 When drawing circuit diagram, it is good to draw for understanding easily.
-
 1. --------------> (dataflow : start from left to right)
-
    Because I think it is more comfortable for people to see something  from left to right direction.
-
 2. Element Library
-
    Draw like symbol that datasheet offers rather than pin order(1,2,3...)
-
    Because similar function pins are nearby each other. 
-
    It is easy to draw on a function base. (datasheet application)
-
    And element having a lot of pins is divided into several blocks.
-
 3. It is good to draw block diagram at a front page of circuit
-
 4. Be careful of TX/RX signals names from connector
-
    1. Mistake sometimes happens that TX/RX are connected wrong.
    2. ex) need own naming rule : TX from CPU, RX from Micom 
-
 5. When draw data line, use Bus line and page connector
 
 ## Practical Experience
@@ -62,23 +51,14 @@ When drawing circuit diagram, it is good to draw for understanding easily.
 # 2. when drawing artwork
 
 1. consider POWER path
-
 2. imagine connection diagram with connector, power and signals
-
 3. consider element location at the same time
-
    1. we can print 1:1 circuit diagram and match to mechanic diagram on a paper
-
 4. consider the amount of current 
-
    1. path thickness, length, via numbers
-
 5. check if items are located as my intention.
-
    1. see if related items get together
-
       (bypass cap is located nearby element)
-
 6.  Don't make GND island
    1. make one GND
 7. Secure GND via
@@ -124,7 +104,6 @@ Use TVS Diode so that LSS goes to GND through it not to have influence on other 
 make PCB hole through hole (metal) and make it touch to mechanical chassis to get large GND
 
 how to touch mechanical chassis
-
 - wire
 - EMI gasket
 
@@ -148,18 +127,18 @@ how to trace the cause
   2. make over 3EA for GND TP (TestPoint)
     Because GND can be short for several POWER TP
 2. Assembly Workability
-- locate connector for easy assemble with cable
-- not to use same pin number connector as possible as I can
-- put parts over 1mm away from machine hole when PCB thickness is 1t
-- parts +/- silk marking
-- machine hole has to hold PCB stable for SMT
+  1. locate connector for easy assemble with cable
+  2. not to use same pin number connector as possible as I can
+  3. put parts over 1mm away from machine hole when PCB thickness is 1t
+  4. parts +/- silk marking
+  5. machine hole has to hold PCB stable for SMT
 
-# 6. AS
+# 6. AS (After Service)
 when board failure happens,
 1. HW : offer trouble shooting guide
 2. SW : how to use SW tool
-  - program download
-  - check and adjust program
+  1. program download
+  2. check and adjust program
 
 
 
